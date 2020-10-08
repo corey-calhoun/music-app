@@ -1,4 +1,5 @@
 import React from 'react'
+import { loginUrl } from '../spotify'
 import './Login.css'
 
 function Login() {
@@ -9,7 +10,7 @@ function Login() {
              src="https://www.nicepng.com/png/full/48-482191_download-now-from-spotify-wind-turbine-icon.png" 
              alt="" />
             <h1>Welcome to Your Music Hub</h1>
-            <a>Login with Spotify</a>
+            <a href={loginUrl}>Login with Spotify</a>
         </div>
     )
 }
