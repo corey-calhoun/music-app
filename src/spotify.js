@@ -1,6 +1,6 @@
 // https://developer.spotify.com/documentation/web-playback-sdk/quick-start/
 
-export const authEndpoint = 'https://accounts.spotify.com/login';
+export const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 const redirectUri = "http://localhost:3000/";
 
@@ -12,7 +12,9 @@ const scopes = [ // determines what the app user can do using Spotify API
     "user-read-playback-state",
     "user-top-read",
     "user-modify-playback-state",
-    "streaming"
+    "streaming",
+    "user-read-email",
+    "user-read-private"
 ];
 
 export const getTokenFromUrl = () => {

@@ -81,6 +81,7 @@ function Footer({spotify}) {
                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1Hom7pApbObsjVNYqJOcPi_b-xLcFIPYuLg&usqp=CAU" 
                  alt="" 
                 />
+                
                 {item ?item(
                   <div className="footer__songInfo">
                         <h4>{item.name}</h4>
