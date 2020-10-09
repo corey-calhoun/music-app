@@ -12,7 +12,13 @@ function Footer() {
     return (
         <div className="footer">
             <div className="footer__left">
-                <p>Album and Song Details</p>
+                <img 
+                 className="footer_albumCover"
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1Hom7pApbObsjVNYqJOcPi_b-xLcFIPYuLg&usqp=CAU" alt="" />
+                <div className="footer__songInfo">
+                    <h4>Song Title</h4>
+                    <p>Artist</p>
+                </div> 
             </div>
             <div className="footer__center">
                 <ShuffleIcon className="footer__green" />

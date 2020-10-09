@@ -12,6 +12,14 @@
 
 .footer__left {
     flex: 0.3;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.footer__left > img {
+    height: 75px;
+    padding-right: 20px;
 }
 
 .footer__center {
@@ -20,9 +28,35 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 280px;;   
+    max-width: 280px;  
 }
 
 .footer__right {
     flex: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.footer__right * .MuiSlider-root {
+    color: blueviolet;
+}
+
+.footer__icon:hover,
+.footer__green:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+}
+
+.footer__green:active {
+    color: blueviolet;
+}
+
+.footer__songInfo > h4 {
+    margin-bottom: 5px;
+}
+
+.footer__songInfo > p {
+    margin-bottom: 10px;
+}
+

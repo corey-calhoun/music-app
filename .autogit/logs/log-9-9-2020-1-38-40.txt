@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Oct 09 2020 01:38:40 GMT-0500 (Central Daylight Time)
+------------------------------------------------------
+
+Modified files:
+* src/assets/css/index.css
+* src/components/Footer.css
+* src/components/Footer.js
+* src/reducer.js
+
+
+Created files:
+* .autogit/logs/log-9-9-2020-1-8-30.txt
+
+
+Deleted files:
+
+
+Renamed files:
