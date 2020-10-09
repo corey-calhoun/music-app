@@ -12,9 +12,7 @@ const scopes = [ // determines what the app user can do using Spotify API
     "user-read-playback-state",
     "user-top-read",
     "user-modify-playback-state",
-    "streaming",
-    "user-read-email",
-    "user-read-private"
+    "streaming"
 ];
 
 export const getTokenFromUrl = () => {
