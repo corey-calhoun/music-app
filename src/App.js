@@ -3,6 +3,7 @@ import './assets/css/App.css';
 import Login from './components/Login'
 import { getTokenFromUrl } from './spotify'
 import SpotifyWebApi from 'spotify-web-api-js'
+import Player from './components/Player';
 
 const spotify = new SpotifyWebApi();
 
@@ -28,10 +29,11 @@ function App() {
 
   return (
     <div className="App">
+
       {
         token ? (
-          <h1>You're logged in</h1>
-        ) : (
+          <Player />
+        ) : ( // Display player if there is a token, if not, display Login
           <Login />
         )
       }
