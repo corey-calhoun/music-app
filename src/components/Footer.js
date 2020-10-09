@@ -15,17 +15,17 @@ function Footer({spotify}) {
 
     useEffect(() => {
         spotify.getMyCurrentPlaybackState().then((r) => {
-        console.log(r);
+            console.log(r);
 
-        dispatch({
-            type: "SET_PLAYING",
-            playing: r.is_playing,
-        });
+            dispatch({
+                type: "SET_PLAYING",
+                playing: r.is_playing,
+            });
 
-        dispatch({
-            type: "SET_ITEM",
-            item: r.item,
-        });
+            dispatch({
+                type: "SET_ITEM",
+                item: r.item,
+            });
         });
     }, [spotify]);
 
