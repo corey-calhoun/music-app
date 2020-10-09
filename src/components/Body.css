@@ -3,6 +3,11 @@
     background: linear-gradient(#535353, rgba(18, 18, 18));
     color: #fff;
     padding: 35px;
+    overflow-y: overlay;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
 }
 
 .body__info {
@@ -28,4 +33,31 @@
 
 .body__infoText > p {
     font-size: 14px;
+}
+
+.body__songs {
+    margin: 20px -30px;
+
+}
+
+.body__icons {
+    display: flex;
+    align-items: center;
+}
+
+.body__icons > .MuiSvgIcon-root {
+    margin-right: 15px;
+}
+
+.body__shuffle {
+    font-size: 70px !important;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ff00aa;
+}
+
+.body__shuffle:hover {
+    transition: 0.1s transform ease-in;
+    transform: scale(1.08);
 }
