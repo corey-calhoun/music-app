@@ -12,9 +12,40 @@ function Body({ spotify }) {
     const playPlaylist = (id) => {
         spotify
           .play({
-              context_uri: `spotify:playlist:`
+              context_uri: `spotify:playlist:37i9dQZEVXcVLEtlInVhLA`,
           })
-    }
+          .then((res) => {
+              spotify.getMyCurrentPlayingTrack().then((r) => {
+                  dispatch({
+                      type: 'SET_ITEM',
+                      item: r.item,
+                  });
+                  dispatch({
+                      type: 'SET_PLAYING',
+                      playing: true,
+                  });
+              });
+          });
+    };
+
+    const playSong = (id) => {
+        spotify
+          .play({
+              uris: [`spotify:track:${id}`],
+          })
+          .then((res) => {
+              spotify.getMyCurrentPlayingTrack().then((r) => {
+                  dispatch({
+                      type: 'SET_ITEM',
+                      item: r.item,
+                  });
+                  dispatch({
+                      type: 'SET_PLAYING',
+                      playing: true,
+                  });
+              });
+          });
+    };
 
     return (
         <div className="body">
@@ -39,11 +70,11 @@ function Body({ spotify }) {
                 </div>
 
                 {discover_weekly?.tracks.items.map(item => (
-                    <SongRow track={item.track} />
+                    <SongRow playsong={playSong} track={item.track} />
                 ))}
             </div>
         </div>
     )
 }
 
-export default Body
+export default Body;

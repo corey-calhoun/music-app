@@ -35,6 +35,18 @@ function App() {
         });
       });
 
+      spotify.getMyTopArtists().then((response) =>
+        dispatch({
+          type: "SET_TOP_ARTISTS",
+          top_artists: response,
+        })
+      );
+
+      dispatch({
+        type: "SET_SPOTIFY",
+        spotify: spotify,
+      });
+
       spotify.getUserPlaylists().then((playlists) => {
         dispatch({
           type: 'SET_PLAYLISTS',
@@ -49,7 +61,7 @@ function App() {
         });
       });
     }
-  }, []);
+  }, [token, dispatch]);
 
   return (
     <div className="App">
