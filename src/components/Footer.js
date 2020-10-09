@@ -78,11 +78,21 @@ function Footer({spotify}) {
             <div className="footer__left">
                 <img 
                  className="footer_albumCover"
-                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1Hom7pApbObsjVNYqJOcPi_b-xLcFIPYuLg&usqp=CAU" alt="" />
-                <div className="footer__songInfo">
-                    <h4>{item.name}</h4>
-                    <p>...</p>
-                </div> 
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1Hom7pApbObsjVNYqJOcPi_b-xLcFIPYuLg&usqp=CAU" 
+                 alt="" 
+                />
+                {item ?item(
+                  <div className="footer__songInfo">
+                        <h4>{item.name}</h4>
+                        <p>{item.artists.map((artist) => artist.name).join(", ")}</p>
+                    </div>   
+                ) : (
+                    <div className="footer__songInfo">
+                        <h4>No song is playing</h4>
+                        <p>...</p>
+                    </div>
+                )}
+                 
             </div>
             <div className="footer__center">
                 <ShuffleIcon className="footer__green" />
