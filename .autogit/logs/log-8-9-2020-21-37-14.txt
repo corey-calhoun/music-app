@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Thu Oct 08 2020 21:37:14 GMT-0500 (Central Daylight Time)
+------------------------------------------------------
+
+Modified files:
+* .gitignore
+* src/components/Body.css
+* src/components/Player.js
+* src/components/Sidebar.css
+* src/components/Sidebar.js
+* src/spotify.js
+
+
+Created files:
+* .autogit/logs/log-8-9-2020-21-7-4.txt
+* src/components/Footer.css
+* src/components/Footer.js
+* src/components/SidebarOption.css
+* src/components/SidebarOption.js
+
+
+Deleted files:
+
+
+Renamed files:
