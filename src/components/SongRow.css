@@ -4,6 +4,7 @@
     padding: 20px;
     align-items: center;
     color: #fff;
+    z-index: 100;
 }
 
 .songRow:hover {
@@ -16,11 +17,11 @@
     margin-left: 20px;
 }
 
-.songRow__infor > h1 {
+.songRow__info > h1 {
     font-size: 16px;
 }
 
-.songRow__infor > p {
+.songRow__info > p {
     font-size: 14px;
     margin-top: 4px;
     color: gray;
