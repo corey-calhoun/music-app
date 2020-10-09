@@ -25,16 +25,23 @@ function App() {
       dispatch({
         type: 'SET_TOKEN',
         token: _token
-      })
+      });
 
       spotify.setAccessToken(_token); // giving asccess token to Api
       spotify.getMe().then(user => {
 
         dispatch({
           type: 'SET_USER',
-          user: user
-        })
+          user: user,
+        });
       });
+
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: 'SET_PLAYLISTS',
+          playlists: playlists,
+        })
+      })
     }
   }, []);
 
@@ -43,7 +50,7 @@ function App() {
 
       {
         token ? (
-          <Player />
+          <Player spotify={spotify}/>
         ) : ( // Display player if there is a token, if not, display Login
           <Login />
         )
