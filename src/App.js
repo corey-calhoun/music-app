@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './assets/css/App.css';
 import Login from './components/Login'
 import { getTokenFromUrl } from './spotify'
@@ -11,8 +11,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
 
-  const [token, setToken] = useState(null);
-  const [{ user }, dispatch] = useDataLayerValue();
+  const [{ user, token }, dispatch] = useDataLayerValue();
 
 
   // run code based on condition when app loads
@@ -22,7 +21,11 @@ function App() {
     const _token = hash.access_token;
 
     if(_token) {
-      setToken(_token)
+
+      dispatch({
+        type: 'SET_TOKEN',
+        token: _token
+      })
 
       spotify.setAccessToken(_token); // giving asccess token to Api
       spotify.getMe().then(user => {
@@ -33,8 +36,6 @@ function App() {
         })
       });
     }
-
-    console.log(user)
   }, []);
 
   return (
