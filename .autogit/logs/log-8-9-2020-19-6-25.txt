@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Thu Oct 08 2020 19:06:25 GMT-0500 (Central Daylight Time)
+------------------------------------------------------
+
+Modified files:
+* src/assets/css/App.css
+* src/spotify.js
+
+
+Created files:
+* .autogit/logs/log-8-9-2020-18-36-15.txt
+
+
+Deleted files:
+
+
+Renamed files:
